@@ -3,6 +3,12 @@ body {
   background-color: #011F3F;
 }
 
+h2{
+  padding-top: 75px;
+  color: white;
+  font-size: 3rem;
+}
+
 #clickToPlay{
   margin: 0 2% 2%;
   height: 40px;
@@ -58,8 +64,8 @@ body {
 .btn {
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border: 10px solid black;
   border-radius: 20%;
 }
