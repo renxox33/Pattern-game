@@ -52,12 +52,11 @@ $('#clickToPlay').on('click', function(){
     started = false;
     gamePattern = [];
     userClickedPattern = [];
-    level=0;
   } else{
     $('#clickToPlay').text('Reset')
     setTimeout(startGame, 1200);
   }
-
+  level=0;
 })
 
 function startGame(){

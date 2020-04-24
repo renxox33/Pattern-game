@@ -5,7 +5,8 @@ $('.btn').click(function(event){if(started){clickCounter++;let userChosenColor=e
 $('#clickToPlay').on('click',function(){if(document.getElementById('clickToPlay').innerHTML=='Reset'){$('#clickToPlay').text('Click here to Play')
 $('h1').text('Follow the pattern')
 started=!1;gamePattern=[];userClickedPattern=[]}else{$('#clickToPlay').text('Reset')
-setTimeout(startGame,1200)}})
+setTimeout(startGame,1200)}
+level=0})
 function startGame(){if(!started){started=!0;nextSequence()}};function checkAnswer(clickCounter,userChosenColor){let flag=!0;let result;if(clickCounter<=level){if(userChosenColor!=gamePattern[clickCounter-1]){console.log('Wrong');result='wrong'}else{if(clickCounter==level&&userChosenColor==gamePattern[clickCounter-1]){console.log('Correct');result='correct'}}}else{console.log('clickCounter > level')}
 handleAnswer(result)}
 function handleAnswer(answer){if(answer=='wrong'){$('#level-title').text('Game Over!');$('body').addClass('game-over');setTimeout(function(){$('body').removeClass('game-over')},2000);playAudio('wrong');level=0;started=!1;gamePattern=[];userClickedPattern=[]}else if(answer=='correct'){userClickedPattern=[];setTimeout(nextSequence,1000)}}
